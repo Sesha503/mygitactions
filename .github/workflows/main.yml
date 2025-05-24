@@ -1,11 +1,6 @@
 name: Master
 
-on:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: '30 17 * * *'
+on: [push, pull_request]
 
 jobs:
   build:
