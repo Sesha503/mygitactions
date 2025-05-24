@@ -1,15 +1,23 @@
 name: Master
-on: 
+
+on:
   push:
     branches:
-      -master
+      - master
   schedule:
-    -corn: 30 17 * * *
+    - cron: '30 17 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Running
-    run: |
-      echo "Running!"
+      - uses: actions/checkout@v1
+      - name: Running
+        run: |
+          echo "Running!"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 23f2003661@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
